@@ -1,14 +1,7 @@
 spring:
-  application:
-    name: cosumer
-server:
-  port: 8001
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    ip-address: true
-feign:
-  hystrix:
-    enabled: true
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: cosumer
+      label: master
+      profile: dev
